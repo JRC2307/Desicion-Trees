@@ -4,8 +4,11 @@
 
 
 https://www.alphagrader.com/courses/17/assignments/165
+
 Goal: learn how to use data mining tools to rapidly test and make experiments with several machine learning algorithms.
 Size of teams: each team must be made up of at most 2
+
+
 # Overview
 
   -  Download and install WEKA.
@@ -18,16 +21,16 @@ Size of teams: each team must be made up of at most 2
 Weka tutorial for Decision Trees lab. (Thanks to Eduardo Vaca!)
 
   1.  Download Weka tool
-  -  When launching it you have to choose between different modes of the tool. Choose ‘Explore’, there is a button for it
-  -  To load a dataset click on the button ‘Open File’
-  -  The test dataset from lab in arff can be found here
-  -  You can use this file for learning how to use the tool
-  -  After loading the dataset, to visualize the tree go to the tab “Classify”
-  -  In that tab you must choose a classifier (there a button on the top of the pague that says ‘Choose’)
-  -  A list of classifiers will be displayed, go to the ‘trees’ folder and select J48
-  -  Then, in the test options select ‘use training set’ and then click ‘Start’
-  -  A new record should appear on the Result list box, right click on that record and select ‘Visualize tree’
-  -  The decision tree should appear in its graphical representation
+  2. When launching it you have to choose between different modes of the tool. Choose ‘Explore’, there is a button for it
+  3.  To load a dataset click on the button ‘Open File’
+  4.  The test dataset from lab in arff can be found here
+  5.  You can use this file for learning how to use the tool
+  6.  After loading the dataset, to visualize the tree go to the tab “Classify”
+  7.  In that tab you must choose a classifier (there a button on the top of the pague that says ‘Choose’)
+  8.  A list of classifiers will be displayed, go to the ‘trees’ folder and select J48
+  9.  Then, in the test options select ‘use training set’ and then click ‘Start’
+  10.  A new record should appear on the Result list box, right click on that record and select ‘Visualize tree’
+  11.  The decision tree should appear in its graphical representation
 
 ### Report
 
