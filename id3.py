@@ -16,7 +16,8 @@
 
 import re
 import fileinput
-
+import math
+import copy
 
 class Node:
     def __init__(self, name, entropy, children, father, number, data_frame, answer, column):
@@ -46,6 +47,25 @@ class Node:
         for child in self.children:
             child.show_tree(spaces + 1)
 
+
+def calculate_entropy(node, root, data_types):
+    entropies = []
+    entropy = 0.0
+    denominator = len(node.data_frame) - 1
+    for element in data_types[root.name]:
+        counter = 0
+        for i in range(1, denominator + 1):
+            if element == node.data_frame[i][root.number]:
+                counter += 1
+        if counter > 0:
+            e_entropy = -((counter/denominator) * math.log(counter/denominator, 2))
+        else:
+            e_entropy = 0
+        entropies.append(e_entropy)
+    for e in entropies:
+        entropy += e
+
+    return entropy
 
 def greater_gain(gains):
     current_greater = 0.0
