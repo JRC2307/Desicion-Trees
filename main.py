@@ -39,5 +39,4 @@ if __name__ == "__main__":
     data_frame.append(attributes)
     for d in data:
         data_frame.append(d)
-    print(data_frame)
     build_tree(data_frame, data_types)
