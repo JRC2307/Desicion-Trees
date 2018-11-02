@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 id3.py
+python3 main.py
