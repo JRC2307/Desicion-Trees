@@ -23,21 +23,22 @@ if __name__ == "__main__":
     data_lines = False
 
     for line in fileinput.input():
+
         if "@attribute" in line:
-            str = re.split(' ', line, 2)
-            str.pop(0)
-            attributes.append(str[0])
-            str[1] = str[1].replace('\n', "").replace('{', "").replace('}', "").replace(' ', "")
-            values = str[1].split(',')
-            data_types[str[0]] = values
+            aux =re.split("[ \t]+|[ \t]+$", line, 2)
+            attributes.append(aux[1])
+            aux[2] = aux[2].replace('{', "").replace('}', "").replace(' ', "").replace('\n', "")
+            entropies = aux[2].split(',')
+            data_types[aux[1]] = entropies
         if data_lines:
-            aux_line = line.replace("\n", "")
-            values = aux_line.split(',')
-            data.append(values)
+            if not "%" in line:
+                new_line = line.replace('\n', "")
+                entropies = new_line.split(',')
+                data.append(entropies)
         if "@data" in line:
             data_lines = True
+
     data_frame.append(attributes)
     for d in data:
         data_frame.append(d)
-    print(data_frame)
     build_tree(data_frame, data_types)
